@@ -1,8 +1,10 @@
-import streamlit as st
-s=streamlit.choice(['R','P','S'])
+import random 
+s=random .choice(['R','P','S'])
+
 i=0
 y=0
 c=0
+import streamlit as st
 while i<5:
     a=st.input("R for rock,P for paper and S for scissors\n")
     if s=='S' and a=='P':
