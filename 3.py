@@ -1,49 +1,64 @@
-#測試程式
-import sys 
+import random
+s=random.choice(['R','P','S'])
+i=0
+y=0
+c=0
+while i<5:
+    a=input("R for rock,P for paper and S for scissors\n")
+    if s=='S' and a=='P':
+        print("Computer = S")
+        c=c+1
+        print("Computer-",c)
+        print("You-",y)
+    elif s=='P' and a=='R':
+        print("Computer = P")
+        c=c+1
+        print("Computer-",c)
+        print("You-",y)
+    elif s=='R' and a=='S':
+        print("Computer = R")
+        c=c+1
+        print("Computer-",c)
+        print("You-",y)
+    elif s=='R' and a=='P':
+        print("Computer = R")
+        y=y+1
+        print("Computer-",c)
+        print("You-",y)
+    elif s=='P' and a=='S':
+        print("Computer = P")
+        y=y+1
+        print("Computer-",c)
+        print("You-",y)
+    elif s=='S' and a=='R':
+        print("Computer = S")
+        y=y+1
+        print("Computer-",c)
+        print("You-",y)
+    elif s=='S' and a=='S':
+        print("Computer = S")
+        print("Same")
 
-def test(fun):
-    if(fun=="inp"):#def inp()開關
-        return 0
-    elif(fun=="swee"):#def swee()開關
-        return 0
-def inp():
-    sinp=sys.stdin.readline()
-    sinp=sinp.replace("\n","")
-    fiect=1
-    #測資讀入
-    while(sinp!="0 0"):
-        hei,wei=map(int,sinp.split())#地圖高跟寬
-        if(test("inp")):print(hei,wei)
-        #地圖讀入
-        swmap=[]
-        for i in range(hei):
-            sinp=sys.stdin.readline()
-            sinp=sinp.replace("\n","").replace(".","0") 
-            swmap.append(list(sinp))
-            if(test("inp")):print(sinp)
-        if(test("inp")):print(swmap)
-        print("Field #%d:"%fiect)
-        fiect+=1
-        swee(swmap,hei,wei)
-        sinp=sys.stdin.readline()
-        sinp=sinp.replace("\n","")
-	#主程式
-def swee(st,h,w):
-#這邊做預處理，如果地雷的鄰居也是地雷，鄰居不變。("*":"*")
-#如果鄰居是數字，那麼加一處理
-    swst={"*":"*","0":"1","1":"2","2":"3","3":"4","4":"5","5":"6","6":"7","7":"8","8":"8"}
-    for j in range(h):
-        for i in range(w):
-            if(st[j][i]=="*"):
-                for sti in range(-1,2,1):
-                    for stj in range(-1,2,1):
-                        if(((sti+j)in range(h))&((stj+i)in range(w))):
-                            st[sti+j][stj+i]=swst.get(st[sti+j][stj+i])
-#答案輸出                            
-    for sth in range(h):
-        for stw in range(w):
-            print("%s"%st[sth][stw],end="")
-        print("")
-    print("")
-        
-inp()    
+        print("Computer-",c)
+        print("You-",y)
+    elif s=='P' and a=='P':
+        print("Computer = P")
+        print("Same")
+
+        print("Computer-",c)
+        print("You-",y)
+    elif s=='R' and a=='R':
+        print("Computer = R")
+        print("Same")
+
+        print("Computer-",c)
+        print("You-",y)
+    else:
+        pass
+    i=i+1
+if c>y:
+    print("----------Computer won the game------------")
+elif c==y:
+    print("------------------Draw---------------------")
+else:
+    print("-------------U won the game----------------")
