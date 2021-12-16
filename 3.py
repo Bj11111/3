@@ -6,7 +6,7 @@ y=0
 c=0
 import streamlit as st
 while i<5:
-    a=st.input("R for rock,P for paper and S for scissors\n")
+    a=input("R for rock,P for paper and S for scissors\n")
     if s=='S' and a=='P':
         print("Computer = S")
         c=c+1
