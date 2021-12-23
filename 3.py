@@ -6,7 +6,7 @@ confirm_input = st.button('開始遊戲')
 
 if confirm_input:
 # 列印方法
-def drawBoard(board):
+def st.write drawBoard(board):
     # This function prints out the board that it was passed.
     # "board" is a list of 10 strings representing the board (ignore index 0)
     st.write('   |   |')
