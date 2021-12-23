@@ -8,17 +8,17 @@ import random
 def drawBoard(board):
     # This function prints out the board that it was passed.
     # "board" is a list of 10 strings representing the board (ignore index 0)
-    st.write('   |   |')
-    st.write(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
-    st.write('   |   |')
-    st.write('-----------')
-    st.write('   |   |')
-    st.write(' ' + board[4] + ' | ' + board[5] + ' | ' + board[6])
-    st.write('   |   |')
-    st.write('-----------')
-    st.write('   |   |')
-    st.write(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
-    st.write('   |   |')
+    st.write('    |    |')
+    st.write(' ' + board[7] + '  | ' + board[8] + '  | ' + board[9])
+    st.write('    |    |')
+    st.write('-------------')
+    st.write('    |    |')
+    st.write(' ' + board[4] + '  | ' + board[5] + '  | ' + board[6])
+    st.write('    |    |')
+    st.write('-------------')
+    st.write('    |    |')
+    st.write(' ' + board[1] + '  | ' + board[2] + '  | ' + board[3])
+    st.write('    |    |')
 
 
 def inputPlayerLetter():
@@ -29,7 +29,7 @@ def inputPlayerLetter():
         
         st.write('Do you want to be X or O?')
         letter = st.text_input('please input X or O ?', 'X O')
-        letter = letter.upper()
+        letter = letter => input.upper()
         
     # the first element in the list is the player’s letter, the second is the computer's letter.
     if letter == 'X':
@@ -174,7 +174,7 @@ while True:
     # 重置輸出板
     theBoard = [' '] * 10
     # 選棋子
-    playerLetter, computerLetter = inputPlayerLetter():
+    playerLetter, computerLetter = inputPlayerLetter()
     # 隨機產生誰先下
     turn = whoGoesFirst()
     # 列印是誰先下
