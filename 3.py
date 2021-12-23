@@ -29,7 +29,7 @@ def inputPlayerLetter():
         st.write(' X or O?')
         letter = st.text_input('please input X or O ?', 'X O')
 import streamlit as st
-        letter = letter.upper()
+letter = letter.upper()
         
     # the first element in the list is the player’s letter, the second is the computer's letter.
     if letter == 'X':
