@@ -1,7 +1,7 @@
 # Tic Tac Toe
 
-# import streamlit as st
-import random
+import streamlit as st
+
 #confirm_input = st.button('開始遊戲')
 #if confirm_input:
 # 列印方法
@@ -20,14 +20,15 @@ def drawBoard(board):
     st.write(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
     st.write('   |   |')
 
+import random
 
 def inputPlayerLetter():
     # Lets the player type which letter they want to be.
     # Returns a list with the player’s letter as the first item, and the computer's letter as the second.
     letter = ''
     while not (letter == 'X' or letter == 'O'):
-        print('Do you want to be X or O?')
-        letter = text_input('please input X or O ?', 'X O')
+        st.write('Do you want to be X or O?')
+        letter = st.text_input('please input X or O ?', 'X O')
         letter = letter.upper()
 
     # the first element in the list is the player’s letter, the second is the computer's letter.
