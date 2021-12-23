@@ -26,8 +26,8 @@ def inputPlayerLetter():
     # Returns a list with the player’s letter as the first item, and the computer's letter as the second.
     letter = ''
     while not (letter == 'X' or letter == 'O'):
-        
-        st.tabie('Do you want to be X or O?')
+        import streamlit as st
+        st.write('Do you want to be X or O?')
         letter = st.text_input('please input X or O ?', 'X O')
         letter = letter.upper()
         
