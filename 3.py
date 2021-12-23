@@ -47,7 +47,7 @@ def whoGoesFirst():
 
 def playAgain():
     # This function returns True if the player wants to play again, otherwise it returns False.
-    print('Do you want to play again? (yes or no)')
+    st.write('Do you want to play again? (yes or no)')
     return input().lower().startswith('y')
 
 
@@ -91,7 +91,7 @@ def getPlayerMove(board):
     # Let the player type in their move.
     move = ' '
     while move not in '1 2 3 4 5 6 7 8 9'.split() or not isSpaceFree(board, int(move)):
-        print('What is your next move? (1-9)')
+        st.write('What is your next move? (1-9)')
         move = input()
     return int(move)
 
@@ -166,7 +166,7 @@ def isBoardFull(board):
     return True
 
 
-print('Welcome to Tic Tac Toe!')
+st.write('Welcome to Tic Tac Toe!')
 
 # 死迴圈，沒有
 while True:
@@ -178,7 +178,7 @@ while True:
     # 隨機產生誰先下
     turn = whoGoesFirst()
     # 列印是誰先下
-    print('The ' + turn + ' will go first.')
+    st.write('The ' + turn + ' will go first.')
     # 遊戲開始
     gameIsPlaying = True
     while gameIsPlaying:
@@ -194,14 +194,14 @@ while True:
             # 判斷遊戲是否結束
             if isWinner(theBoard, playerLetter):
                 drawBoard(theBoard)
-                print('Hooray! You have won the game!')
+                st.write('Hooray! You have won the game!')
                 # 結束遊戲
                 gameIsPlaying = False
             else:
                 # 驗證畫板是否畫滿
                 if isBoardFull(theBoard):
                     drawBoard(theBoard)
-                    print('The game is a tie!')
+                    st.write('The game is a tie!')
                     break
                 else:
                     turn = 'computer'
@@ -214,12 +214,12 @@ while True:
 
             if isWinner(theBoard, computerLetter):
                 drawBoard(theBoard)
-                print('The computer has beaten you! You lose.')
+                st.write('The computer has beaten you! You lose.')
                 gameIsPlaying = False
             else:
                 if isBoardFull(theBoard):
                     drawBoard(theBoard)
-                    print('The game is a tie!')
+                    st.write('The game is a tie!')
                     break
                 else:
                     turn = 'player'
