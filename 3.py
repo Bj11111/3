@@ -33,9 +33,9 @@ letter = letter.upper()
         
     # the first element in the list is the player’s letter, the second is the computer's letter.
 if letter == 'X':
-    return ['X', 'O']
+     break ['X', 'O']
 else:
-    return ['O', 'X']
+     break ['O', 'X']
 
 
 def whoGoesFirst():
