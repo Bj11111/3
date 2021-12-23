@@ -1,7 +1,7 @@
 # Tic Tac Toe
 
-import streamlit as st
-
+#import streamlit as st
+import random
 #confirm_input = st.button('開始遊戲')
 #if confirm_input:
 # 列印方法
@@ -20,7 +20,6 @@ def drawBoard(board):
     st.write(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
     st.write('   |   |')
 
-import random
 
 def inputPlayerLetter():
     # Lets the player type which letter they want to be.
