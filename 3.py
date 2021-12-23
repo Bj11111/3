@@ -32,10 +32,10 @@ import streamlit as st
 letter = letter.upper()
         
     # the first element in the list is the player’s letter, the second is the computer's letter.
-    if letter == 'X':
-        return ['X', 'O']
-    else:
-        return ['O', 'X']
+if letter == 'X':
+    return ['X', 'O']
+else:
+    return ['O', 'X']
 
 
 def whoGoesFirst():
