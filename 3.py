@@ -166,7 +166,7 @@ def isBoardFull(board):
     return True
 
 
-st.write('Welcome to Tic Tac Toe!')
+print('Welcome to Tic Tac Toe!')
 
 # 死迴圈，沒有
 while True:
