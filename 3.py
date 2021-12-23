@@ -1,7 +1,7 @@
 # Tic Tac Toe
 
 #import streamlit as st
-import random and streamlit as st
+import random 
 #confirm_input = st.button('開始遊戲')
 #if confirm_input:
 # 列印方法
