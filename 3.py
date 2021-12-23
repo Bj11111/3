@@ -20,7 +20,7 @@ def drawBoard(board):
     st.write(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
     st.write('   |   |')
 
-
+import streamlit as st
 def inputPlayerLetter():
     # Lets the player type which letter they want to be.
     # Returns a list with the player’s letter as the first item, and the computer's letter as the second.
