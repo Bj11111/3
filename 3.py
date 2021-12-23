@@ -174,7 +174,7 @@ while True:
     # 重置輸出板
     theBoard = [' '] * 10
     # 選棋子
-    playerLetter, computerLetter = inputPlayerLetter()
+    playerLetter, computerLetter = inputPlayerLetter():
     # 隨機產生誰先下
     turn = whoGoesFirst()
     # 列印是誰先下
