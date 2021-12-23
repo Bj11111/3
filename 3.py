@@ -4,6 +4,7 @@ import streamlit as st
 
 confirm_input = st.button('開始遊戲')
 
+if confirm_input:
 # 列印方法
 def drawBoard(board):
     # This function prints out the board that it was passed.
