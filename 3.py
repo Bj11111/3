@@ -165,7 +165,7 @@ def isBoardFull(board):
             return False
     return True
 
-        st.write('Welcome to Tic Tac Toe!')
+    st.write('Welcome to Tic Tac Toe!')
 
 # 死迴圈，沒有
 while True:
