@@ -2,12 +2,10 @@
 
 import streamlit as st
 
-confirm_input = st.button('開始遊戲')
-
-if confirm_input:
+#confirm_input = st.button('開始遊戲')
+#if confirm_input:
 # 列印方法
 def drawBoard(board):
-    
     # This function prints out the board that it was passed.
     # "board" is a list of 10 strings representing the board (ignore index 0)
     st.write('   |   |')
@@ -29,7 +27,8 @@ def inputPlayerLetter():
     letter = ''
     while not (letter == 'X' or letter == 'O'):
         st.write('Do you want to be X or O?')
-        letter = input().upper()
+        st.iuput_text('please input X or O ?')('X O')
+        letter = st.input().upper()
 
     # the first element in the list is the player’s letter, the second is the computer's letter.
     if letter == 'X':
